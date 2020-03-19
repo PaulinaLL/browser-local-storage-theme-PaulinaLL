@@ -42,7 +42,7 @@ refactoring is small, it's less likely to go wrong. The system is kept fully wor
 reducing the chances that a system can get seriously broken during the restructuring.
 ​
 Martin Fowler
-```
-
+``
 ​
 (taken from https://refactoring.com/)
+```
