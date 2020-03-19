@@ -16,7 +16,6 @@ body {
 header {
   border: 1px solid purple;
   display: flex;
-  height: 15vh;
 }
 
 .container {
@@ -25,13 +24,13 @@ header {
 
 h2 {
   margin: 20px;
+  flex-grow: 1;
 }
 section {
   background-color: rgb(251, 226, 230);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 85vh;
 }
 
 .darkHeader {
