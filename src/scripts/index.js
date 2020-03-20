@@ -4,19 +4,35 @@ import "regenerator-runtime/runtime";
 document.addEventListener("DOMContentLoaded", event => {
   console.log("DOM fully loaded and parsed");
 
-  const initialColorTheme = localStorage.getItem("colorTheme");
-
-  console.log(initialColorTheme);
-
   const toggler = document.getElementById("toggle");
   const header = document.querySelector("header");
   const section = document.querySelector("section");
 
-  toggler.addEventListener("click", () => {
-    header.classList.toggle("darkHeader");
-    section.classList.toggle("darkSection");
+  // functions:
 
-    let colorTheme;
-    localStorage.setItem("colorTheme", colorTheme);
+  const setDarkTheme = () => {
+    header.classList.add("darkHeader");
+    section.classList.add("darkSection");
+  };
+
+  const setLightTheme = () => {
+    header.classList.remove("darkHeader");
+    section.classList.remove("darkSection");
+  };
+
+  const initialColorTheme = localStorage.getItem("colorTheme");
+  console.log(localStorage);
+  console.log(initialColorTheme);
+
+  // event listener on toggler:
+  toggler.addEventListener("click", () => {
+    if (initialColorTheme === "dark") {
+      setLightTheme();
+      localStorage.setItem(initialColorTheme, "light");
+    } else {
+      setDarkTheme();
+      localStorage.setItem(initialColorTheme, "dark");
+    }
+    console.log(initialColorTheme);
   });
 });
