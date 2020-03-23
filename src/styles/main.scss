@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei");
+@import "../styles/_toogler.scss";
+
+body,
+body * {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  border: 3px solid green;
+}
+
+header {
+  border: 1px solid purple;
+  display: flex;
+}
+
+.container {
+  border: 1px solid red;
+}
+
+h2 {
+  margin: 20px;
+  flex-grow: 1;
+}
+section {
+  background-color: rgb(251, 226, 230);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.darkHeader {
+  background-color: black;
+  color: rgb(230, 219, 219);
+}
+
+.darkSection {
+  background-color: rgb(78, 68, 68);
+  color: rgb(201, 194, 194);
+}
