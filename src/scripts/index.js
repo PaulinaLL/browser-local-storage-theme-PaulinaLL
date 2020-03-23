@@ -33,10 +33,10 @@ document.addEventListener("DOMContentLoaded", event => {
   toggler.addEventListener("click", () => {
     if (toggler.checked) {
       setLightTheme();
-      localStorage.setItem(initialColorTheme, "light");
+      localStorage.setItem("colorTheme", "light");
     } else {
       setDarkTheme();
-      localStorage.setItem(initialColorTheme, "dark");
+      localStorage.setItem("colorTheme", "dark");
     }
     console.log(initialColorTheme);
   });
