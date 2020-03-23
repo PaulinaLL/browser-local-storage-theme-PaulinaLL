@@ -21,12 +21,17 @@ document.addEventListener("DOMContentLoaded", event => {
   };
 
   const initialColorTheme = localStorage.getItem("colorTheme");
+  if (initialColorTheme === "dark") {
+    setDarkTheme();
+  } else {
+    setLightTheme();
+  }
   console.log(localStorage);
   console.log(initialColorTheme);
 
   // event listener on toggler:
   toggler.addEventListener("click", () => {
-    if (initialColorTheme === "dark") {
+    if (toggler.checked) {
       setLightTheme();
       localStorage.setItem(initialColorTheme, "light");
     } else {
